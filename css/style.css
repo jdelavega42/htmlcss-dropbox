@@ -7,17 +7,19 @@
 
 
 /* !COMMON */
-body {
-    max-width: 1200px;
-}
-img {
-    width: 100%;
-}
 :root {
     --primary-clr: #B4D0E7;
     --secondary-clr: white;
     --tertiary-clr: black;
     --quaternary-clr: #0061FF;
+    --max-width: 1500px;
+}
+body {
+    max-width: var(--max-width);
+    font-family: sans-serif;
+}
+img {
+    max-width: 100%;
 }
 .bgazure {
     background-color: var(--primary-clr);
@@ -41,14 +43,24 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
+
+.blue-button {
+    background-color: var(--quaternary-clr);
+    color: var(--secondary-clr);
+    padding: .125rem .5rem;
+}
+/* Font */
+h1 {
+    font-size: 3rem;
+}
 /* *Debug */
 .container-red {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     border: 5px solid red;
 }
 .container-blue {
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     border: 5px solid blue;
 }
@@ -64,8 +76,24 @@ a {
 /* !HEADER */
 .menu {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: var(--max-width);
     height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: 1.5px 0 1.5px 1.5px rgba(0, 0, 0, .3);
 }
+.menu * {
+    gap: 1rem;
+}
+.menu > * {
+    height: 2rem;
+    align-items: center;
+}
+
 header .bgazure {
     margin-top: 60px;
 }
