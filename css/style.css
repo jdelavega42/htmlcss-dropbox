@@ -14,7 +14,7 @@
     --quaternary-clr: #0061FF;
     --quinary-clr: #E5E5E7;
     /* debug */
-    --max-width: 1080px;
+    --max-width: 1440px;
 }
 body {
     max-width: var(--max-width);
@@ -24,7 +24,7 @@ body {
 img {
     max-width: 100%;
 }
-/* *background */
+/* BACKGROUND */
 .bgazure {
     background-color: var(--primary-clr);
 }
@@ -35,7 +35,7 @@ img {
     background-color: var(--tertiary-clr);
     color: var(--secondary-clr);
 }
-/*  *container*/
+/*  CONTAINER*/
 .full-container {
     margin: 0 auto;
 }
@@ -53,7 +53,7 @@ img {
 .bottom-border{
     border-bottom: 1px solid var(--quinary-clr);
 }
-/* *Utilities */
+/* UTILITIES */
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -83,7 +83,7 @@ img {
 .margin-fix {
     padding-top: 60px;
 }
-/* *Font */
+/* FONT */
 h1 {
     font-size: 3.5rem;
 }
@@ -109,24 +109,10 @@ li {
 i { 
     font-size: inherit;
 }
-/* *Debug */
-.container-red {
-    width: 70%;
-    margin: 0 auto;
-    border: 5px solid red;
-    margin-top: 100px;
-}
-.container-blue {
-    width: 60%;
-    margin: 0 auto;
-    border: 5px solid blue;
-}
-.container-pink {
-    border: 3px dashed pink;
-}
+
 
 /* !HEADER */
-/* menu */
+/* MENÙ */
 header a {
     text-decoration: none;
 
@@ -150,7 +136,7 @@ header a {
     height: 2rem;
     align-items: center;
 }
-/* *jumbotron */
+/* JUMBOTRON */
 header .bgazure {
     margin-bottom: -60px;
 }
@@ -166,8 +152,10 @@ header .bgazure {
 .jumbotron-right {
     width: 75%;
 }
+
+
 /* !MAIN */
-/*  container-blue top*/
+/*  PLANS SECTION*/
 .front-business > * {
     margin: 3em 0;
 }
@@ -220,7 +208,7 @@ header .bgazure {
     content: '\f007';
 
 }
-/* partner section */
+/* PARTNER SECTION */
 .partner .left {
     width: 60%;
 }
@@ -231,7 +219,7 @@ header .bgazure {
 .partner.right > * {
     margin-bottom: 1rem;
 }
-/* operations section */
+/* OPERATIONS SECTION */
 .six-pack {
     gap: 10px;
 }
@@ -239,7 +227,7 @@ header .bgazure {
     width: calc(100% / 3 - 20px / 3);
     margin-bottom: 20px;
 }
-/* full-container logos */
+/* LOGOS SECTION */
 .full-container .logos-box {
     width: calc(100% / 3);
     height: 300px;
@@ -292,7 +280,7 @@ header .bgazure {
 .clear {
     background-color: #FFD830;
 }
-/* cta */
+/* CTA SECTION */
 .blue-left {
     width: 60%;
 }
@@ -301,7 +289,7 @@ header .bgazure {
     justify-content: center;
     align-items: center;
 }
-/* container-blue faq */
+/* FAQ SECTION*/
 .question {
     margin: 1rem 0;
 }
@@ -312,6 +300,7 @@ header .bgazure {
     justify-content: space-between;
     align-items: center;
 }
+/* INTERACTIONS */
 .faq li:hover .answer{
     display: inline-block;
     margin: 1rem 0;
@@ -325,6 +314,36 @@ i {
 .faq li:hover i {
     transform: rotate(180deg);
 }
-/* !FOOTER */
 
-/* Debug */
+
+/* !FOOTER */
+footer {
+    padding-bottom: 60px;
+}
+/* CONTACT SECTION */
+.column-footer {
+    width: calc(100% / 5);
+    margin: 2rem 0;
+}
+.contact {
+    color: white;
+}
+.contact a{
+    text-decoration: none;
+    color: inherit;
+}
+.contact li{
+    margin: .5rem 0;
+}
+/* LANGUAGE */
+.language {
+    height: 50px;
+    align-items: end;
+    border-top: 1px solid white;
+    gap: .5rem;
+    
+}
+.fa-chevron-up {
+    font-size: .5rem;
+    line-height: 13px;
+}
