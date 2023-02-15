@@ -11,9 +11,9 @@
     --primary-clr: #B4D0E7;
     --secondary-clr: white;
     --tertiary-clr: black;
-    --quaternary-clr: #0061FF;
+    --quaternary-clr: rgb(0, 97, 255);
     --quinary-clr: #E5E5E7;
-    --max-width: 1080px;
+    --max-width: 1440px;
 }
 body {
     max-width: var(--max-width);
@@ -22,6 +22,7 @@ body {
 img {
     max-width: 100%;
 }
+
 /* ?BACKGROUND */
 .bgazure {
     background-color: var(--primary-clr);
@@ -95,22 +96,27 @@ li {
     color: var(--secondary-clr);
     padding: .25rem .5rem;
     text-decoration: none;
+    display: inline-block;
+    transition: background-color 100ms;
 
 }
-.white-button{
-    border: 1px solid black;
-    color: black;
-    padding: .25rem .5rem;
-    text-decoration: none;
-} 
 .cta-button {
     background-color: white;
     padding: .25rem .5rem;
     text-decoration: none;
+    transition: background-color 100ms;
 }
 .margin-fix {
     padding-top: 60px;
 }
+/* ?BONUS */
+.blue-button:hover {
+    background-color: rgba(0, 97, 255, .5);
+}
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, .8);
+}
+
 
 /* !HEADER */
 /* todoMENÙ */
@@ -141,7 +147,10 @@ header a {
     align-items: center;
 }
 .logo {
-    align-self: center;
+    vertical-align: middle;
+}
+.menu-button {
+    display: inline;
 }
 /* ?BONUS */
 .menu .underline:hover {
@@ -163,8 +172,6 @@ header .bgazure {
 .jumbotron-right {
     width: 70%;
 }
-
-
 /* !MAIN */
 /*  todoPLANS SECTION*/
 .payment {
@@ -188,6 +195,12 @@ header .bgazure {
     display: block;
     text-align: center;
 }
+main .row-col3 {
+    justify-content: space-between;
+}
+.col1 {
+    width: 100%;
+}
 .recap{
     font-weight: bold;
     margin: 1rem 0 .5rem;
@@ -203,10 +216,49 @@ header .bgazure {
     width: 30%;
     text-align: end;
 }
-/* .li-user::before {
-    content: '\f07b';
-} */
 /* ?BONUS */
+.fontawesomeicon {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.user-i::before {
+    content: '\f007';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+	font-weight: 900;
+}
+.folder-i::before {
+    content: '\f07b';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+	font-weight: 900;
+}
+.share-i::before {
+    content: '\f1e0';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+	font-weight: 900;
+}
+.users-i::before {
+    content: '\f0c0';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+	font-weight: 900;
+}
+.building-i::before {
+    content: '\f1ad';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+	font-weight: 900;
+}
+.check-i::before {
+    content: '\f00c';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+	font-weight: 900;
+    color: green;
+}
 #bold-circle::before {
     content: '' ;
     border: 4px solid #0061FF;
@@ -245,7 +297,7 @@ header .bgazure {
 /* todoLOGOS SECTION */
 .full-container .logos-box {
     width: calc(100% / 3);
-    height: 300px;
+    height: calc(100vw / 3);
 }
 .photo {
     display: flex;
@@ -254,7 +306,8 @@ header .bgazure {
     align-items: center;
     background-color: black;
     width: calc(100% / 2);
-    height: calc(100% / 2);
+    height: calc(100vw / 6);
+    transition: border 100ms, width 150ms;
 }
 .photo img {
     filter: invert(1);
@@ -303,6 +356,13 @@ header .bgazure {
     justify-content: center;
     align-items: center;
 }
+/* ?INTERACTIONS */
+.photo:hover {
+    border: 20px solid rgba(0, 0, 0, .3);
+}
+.photo:hover img {
+    width: 80%;
+}
 /* todoFAQ SECTION*/
 .question {
     margin: 1rem 0;
@@ -318,9 +378,29 @@ header .bgazure {
 .faq li:hover .answer{
     display: inline-block;
     margin: 1rem 0;
+    animation: drop 250ms linear;
 }
+/* @keyframes drop {
+    0% {
+        top: 0;
+        
+    }
+    25% {
+        top: 5px;
+    }
+    50% {
+        top: 10px;
+    }
+    75% {
+        top: 15px;
+    }
+    100% {
+        top: 20px;
+    }
+} */
 .faq li:hover hr {
     display: none;
+
 }
 i {
     transition: 250ms;
@@ -348,6 +428,9 @@ footer {
 }
 .contact li{
     margin: .5rem 0;
+}
+.column-footer li:hover a{
+    color: var(--primary-clr);
 }
 /* todoLANGUAGE */
 .language {
